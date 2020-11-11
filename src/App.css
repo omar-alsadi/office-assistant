@@ -1,38 +1,63 @@
+* {
+    margin: 0;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    background-image: url("./assest/office.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slide {
+    display: flex;
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sara {
+    height: 500px;
+    align-self: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.speechBox {
+    margin-top: 15%;
+    padding: 20px;
+    width: 350px;
+    height: 190px;
 }
 
-.App-link {
-  color: #61dafb;
+.sp-box {
+    width: 350px;
+    opacity: .8;
+    position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.option {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.option-container:nth-last-child() {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.speechText {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    padding: 30px 15px;
+    transform: translate(10%, 10%);
+}
+
+.situation {
+    margin-bottom: 15px;
 }
