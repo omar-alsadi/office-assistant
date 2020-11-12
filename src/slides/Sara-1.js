@@ -6,7 +6,8 @@ import speechBox from '../assest/speech-box.png'
 
 const Sara1 = hundleClick => {
 
-    const [option, setOption] = useState("")
+    const [option, setOption] = useState("");
+
     console.log(option);
     return (
         <div className='slide'>
