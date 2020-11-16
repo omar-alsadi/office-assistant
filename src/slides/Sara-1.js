@@ -1,27 +1,36 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import sara from '../assest/sara-1.png';
 
 import speechBox from '../assest/speech-box.png'
 
-const Sara1 = hundleClick => {
+import { useStateValue } from './../StateProvider';
 
-    const [option, setOption] = useState("");
+import setOption from './../actions';
 
-    console.log(option);
+const Sara1 = () => {
+
+    const [state, dispatch] = useStateValue();
+
+    const hundleClick = e => {
+        dispatch(setOption(e.target.value));
+        return state;
+    }
+
+
     return (
         <div className='slide'>
             <img src={sara} className='sara' alt='sara' />
             <div className='speechBox'>
                 <img src={speechBox} className='sp-box' alt='speechBox' />
                 <div className='speechText'>
-                    <div className='situation'>{}</div>
+                    <div className='situation'>{ }</div>
                     <div className='option-container'>
-                        <input name='options' type='radio' className='option' id='1' value='Hello' onClick={e => setOption(e.target.value)} />
+                        <input name='options' type='radio' className='option' id='1' value='Hello' onClick={e => hundleClick(e)} />
                         <label for='1' type='text' className='label'>Hello</label>
                     </div>
                     <div className='option-container'>
-                        <input name='options' type='radio' className='option' id='2' value="Bonjour" onClick={e => setOption(e.target.value)} />
+                        <input name='options' type='radio' className='option' id='2' value="Bonjour" onClick={e => hundleClick(e)} />
                         <label for='2' type='text' className='label'>Bonjour</label>
                     </div>
                 </div>
