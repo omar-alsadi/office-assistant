@@ -41,10 +41,6 @@
     cursor: pointer;
 }
 
-.option-container:nth-last-child() {
-    margin-bottom: 10px;
-}
-
 .label {
     font-weight: 600;
     cursor: pointer;
@@ -55,9 +51,32 @@
     width: 300px;
     height: auto;
     padding: 30px 15px;
-    transform: translate(10%, 10%);
+    transform: translate(5%, 5%);
+    animation: showText 1s ease-in-out;
+    transition: all .4s ease;
 }
 
 .situation {
     margin-bottom: 15px;
+}
+
+.option-container {
+    margin: 5px 0;
+    letter-spacing: 1px;
+    transition: all .4s ease;
+}
+
+.option-container:hover {
+    color: indigo;
+    font-weight: bold;
+}
+
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

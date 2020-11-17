@@ -1,29 +1,58 @@
 import React from 'react'
 import './App.css';
 
-import Sara1 from './slides/Sara-1'
-import Sara2 from './slides/Sara-2'
+import Sara from './slides/Sara'
+import SaraEn from './slides/Sara.English/SaraEn'
+import SaraEn1A from './slides/Sara.English/SaraEn.website'
+import SaraEn1B from './slides/Sara.English/SaraEn.meet'
+import SaraEn2B from './slides/Sara.English/SaraEn.contact'
+
+import SaraFr from './slides/Sara.French/SaraFr'
 
 import { useStateValue } from './StateProvider'
 
 
 const App = () => {
 
-  const [{ option }] = useStateValue();
+  const [state] = useStateValue();
 
 
-  console.log(option);
+  console.log(state);
 
-  if ({ option } === 'Hello') {
+  if (state.option === 'Hello') {
     return (
       <div className="App">
-        <Sara2 />
+        <SaraEn />
+      </div>
+    );
+  } else if (state.option === 'I’m looking for a website' || state.option === 'Yes, I’m looking for a website') {
+    return (
+      <div className="App">
+        <SaraEn1A />
+      </div>
+    )
+  } else if (state.option === 'I wanna meet Mr.Omar Alsadi') {
+    return (
+      <div className="App">
+        <SaraEn1B />
+      </div>
+    )
+  } else if (state.option === 'Can I contact with him directly?') {
+    return (
+      <div className="App">
+        <SaraEn2B />
+      </div>
+    )
+  } else if (state.option === 'Bonjour') {
+    return (
+      <div className="App">
+        <SaraFr />
       </div>
     );
   } else {
     return (
       <div className="App">
-        <Sara1 />
+        <Sara />
       </div>
     );
   }

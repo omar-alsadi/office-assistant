@@ -4,11 +4,11 @@ import sara from '../assest/sara-1.png';
 
 import speechBox from '../assest/speech-box.png'
 
-import { useStateValue } from './../StateProvider';
+import { useStateValue } from '../StateProvider';
 
-import setOption from './../actions';
+import setOption from '../actions';
 
-const Sara1 = () => {
+const Sara = () => {
 
     const [state, dispatch] = useStateValue();
 
@@ -41,4 +41,4 @@ const Sara1 = () => {
     )
 }
 
-export default Sara1
+export default Sara
