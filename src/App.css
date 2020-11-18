@@ -56,8 +56,19 @@
     transition: all .4s ease;
 }
 
+.speechTextwithInfo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    padding: 12px;
+    transform: translate(5%, 5%);
+    animation: showText 1s ease-in-out;
+    transition: all .4s ease;
+}
+
 .situation {
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .option-container {
