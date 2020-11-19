@@ -20,7 +20,6 @@ const SaraEn = () => {
     if (state.option === 'Hello') {
         return (
 
-
             <div className='slide'>
                 <img src={sara} className='sara' alt='sara' />
                 <div className='speechBox'>
