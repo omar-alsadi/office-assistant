@@ -84,7 +84,7 @@ const App = () => {
         <ResetButton />
         <SaraEnBye />
       </div>
-    )      ///////////////// FRANCE ///////////////// Oui, Je cherche son site web
+    )      ///////////////// FRANCE /////////////////
   } else if (state.option === 'Je recherche un site Web' || state.option === 'Oui, je cherche le site web') {
     return (
       <div className="App">
