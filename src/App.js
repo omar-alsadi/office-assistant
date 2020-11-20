@@ -13,6 +13,12 @@ import SaraEnBye from './slides/Sara.English/SaraEn.bye'
 import ResetButton from './slides/ResetButton'
 
 import SaraFr from './slides/Sara.French/SaraFr'
+import SaraFr1A from './slides/Sara.French/SaraFr.website'
+import SaraFr1B from './slides/Sara.French/SaraFr.meet'
+import SaraFr2B from './slides/Sara.French/SaraFr.contact'
+import SaraFr3 from './slides/Sara.French/SaraFr.contact-info'
+import SaraFr4 from './slides/Sara.French/SaraFr.website-info';
+import SaraFrBye from './slides/Sara.French/SaraFr.bye'
 
 import { useStateValue } from './StateProvider'
 
@@ -20,7 +26,6 @@ import { useStateValue } from './StateProvider'
 const App = () => {
 
   const [state] = useStateValue();
-
 
   console.log(state);
 
@@ -78,6 +83,55 @@ const App = () => {
       <div className="App">
         <ResetButton />
         <SaraEnBye />
+      </div>
+    )      ///////////////// FRANCE ///////////////// Oui, Je cherche son site web
+  } else if (state.option === 'Je recherche un site Web' || state.option === 'Oui, je cherche le site web') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr1A />
+      </div>
+    )
+  } else if (state.option === 'Je veux rencontrer Monsieur Omar Alsadi') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr1B />
+      </div>
+    )
+  } else if (state.option === 'Puis-je le contacter directement?') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr2B />
+      </div>
+    )
+  } else if (state.option === 'Par téléphone') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr3 info={' ( 514 ) 664-9779'} />
+      </div>
+    )
+  } else if (state.option === 'Par courriel') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr3 info={'omar_alsadi@outlook.com'} />
+      </div>
+    )
+  } else if (state.option === 'Une seul page d\'application' || state.option === 'Une page e-commerce') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFr4 />
+      </div>
+    )
+  } else if (state.option === 'Non, Merci') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFrBye />
       </div>
     )
   } else if (state.option === 'Bonjour') {
