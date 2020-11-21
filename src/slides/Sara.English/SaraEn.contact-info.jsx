@@ -23,7 +23,7 @@ const SaraEn3 = ({ info }) => {
         <div className='slide'>
             <img src={sara} className='sara' alt='sara' />
             <div className='speechBox'>
-                <img src={speechBox} className='sp-box' alt='speechBox' />
+                <img src={speechBox} className='sp-box-details' alt='speechBox' />
                 <div className='speechTextwithInfo'>
                     <div className='situation'>Great! You can contact him by {info}</div>
                     <div className='situation'>Do you need anything else ?</div>

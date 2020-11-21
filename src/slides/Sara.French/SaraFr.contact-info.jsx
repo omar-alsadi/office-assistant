@@ -23,10 +23,10 @@ const SaraFr3 = ({ info }) => {
         <div className='slide'>
             <img src={sara} className='sara' alt='sara' />
             <div className='speechBox'>
-                <img src={speechBox} className='sp-box' alt='speechBox' />
+                <img src={speechBox} className='sp-box-details' alt='speechBox' />
                 <div className='speechTextwithInfo'>
                     <div className='situation'>Super! Vous pouvez lui contacter sur ce numero {info}</div>
-                    <div className='situation'>As-tu besoin d'autre chose ?</div>
+                    <div className='situation'>Avez-vous besoin de quelque chose d'autre?</div>
                     <div className='option-container'>
                         <input name='options' type='radio' className='option' id='1' value='Non, Merci' onClick={e => hundleClick(e)} />
                         <label for='1' type='text' className='label'>Non, Merci.</label>

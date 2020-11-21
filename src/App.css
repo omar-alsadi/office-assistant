@@ -36,6 +36,12 @@
     position: absolute;
 }
 
+.sp-box-details {
+    width: 385px;
+    opacity: .8;
+    position: absolute;
+}
+
 .option {
     margin: 0 5px;
     cursor: pointer;
