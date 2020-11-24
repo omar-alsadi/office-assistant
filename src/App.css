@@ -105,3 +105,36 @@
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 680px) {
+    body {
+        font-size: 13px;
+    }
+
+    .slide {
+        flex-direction: column-reverse;
+    }
+
+    .sara {
+        height: 450px;
+        align-self: center;
+    }
+
+    .speechBox {
+        margin-top: 0;
+    }
+
+    .sp-box-details {
+        width: 350px;
+    }
+
+    .Reset {
+        height: 65px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .speechBox {
+        padding: 10px;
+    }
+}
