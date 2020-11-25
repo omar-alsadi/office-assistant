@@ -1,45 +1,42 @@
-import React from 'react'
-import ResetButton from './ResetButton'
+import React, { useState } from 'react'
+import Reset from './../assest/reset.png'
 
-import { useStateValue, StateProvider } from './../StateProvider'
+import { configure, shallow } from "enzyme";
 
-import { configure, shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter });
 
-describe('expect to render ResetButton Component', () => {
-    // expect(shallow(<ResetButton />)).toMatchSnapshot();
 
-    // useStateValue = { option: '' };
+const ResetButton = () => {
 
-    let wrapper;
+    const [state, setOption] = useState('Hello');
 
-    beforeEach(() => {
-        wrapper = shallow(
-            <StateProvider>
-                <ResetButton />
-            </StateProvider>
-        );
+    const hundleClick = e => {
+        setOption(e);
+        console.log(state);
     }
+
+    return (
+        <div>
+            <img className='Reset' id='Reset' src={Reset} alt='reset' title='Reset' value='' onClick={() => hundleClick('')} />
+        </div>
     )
+}
+
+
+describe('expect to render ResetButton Component', () => {
+
+    expect(shallow(<ResetButton />)).toMatchSnapshot();
 
     it('reset state to undefined', () => {
-        const dispatch = jest.fn();
 
-        // wrapper = shallow(
-        //     <StateProvider>
-        //         <ResetButton />
-        //     </StateProvider>
-        // );
+        const wrapper = shallow(<ResetButton />);
 
-        // testing state
-        wrapper.find('[className="Reset"]').simulate('click');
-        // expect(wrapper.state()).toEqual({ option: '' })
-        expect(dispatch).toBeCalledWith({
-            type: 'SET_OPTION',
-            payload: ''
-        });
+        // testing state with Hooks
 
+        wrapper.find('[id="Reset"]').simulate('click');
+
+        expect(wrapper.find('[id="Reset"]').prop('value')).toEqual('');
     })
 })
