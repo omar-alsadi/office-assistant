@@ -126,20 +126,12 @@
     transition: all .4s ease-in-out;
 }
 
+.Reset:hover {
+    animation: clicked 1s ease-in-out;
+}
+
 .Reset:active {
     bottom: 22px;
-}
-
-.arrow {
-    width: 80px;
-    background-image: url("./assest/reset.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.arrow:hover {
-    animation: clicked 1s ease-in-out;
 }
 
 @keyframes clicked {

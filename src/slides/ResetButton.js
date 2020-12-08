@@ -17,7 +17,7 @@ const ResetButton = () => {
 
     return (
         <div>
-            <img className='Reset arrow' src={Reset} alt='reset' title='Reset' value='' onClick={e => hundleClick(e)} />
+            <img className='Reset' src={Reset} alt='reset' title='Reset' value='' onClick={e => hundleClick(e)} />
         </div>
     )
 }
