@@ -30,8 +30,21 @@
     height: 190px;
 }
 
+.speechBoxSB {
+    margin-top: 15%;
+    padding: 20px;
+    width: 400px;
+    height: 190px;
+}
+
 .sp-box {
     width: 350px;
+    opacity: .8;
+    position: absolute;
+}
+
+.sb-box {
+    width: 400px;
     opacity: .8;
     position: absolute;
 }
@@ -62,6 +75,16 @@
     transition: all .4s ease;
 }
 
+.speechTextSB {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    padding: 15px;
+    transform: translate(5%, 5%);
+    animation: showText 1s ease-in-out;
+    transition: all .4s ease;
+}
+
 .speechTextwithInfo {
     position: absolute;
     width: 300px;
@@ -83,7 +106,13 @@
     transition: all .4s ease;
 }
 
-.option-container:hover {
+.link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.option-container:hover, .link:hover {
     color: indigo;
     font-weight: bold;
 }
