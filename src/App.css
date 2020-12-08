@@ -94,6 +94,33 @@
     right: 25px;
     bottom: 25px;
     cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.Reset:active {
+    bottom: 22px;
+}
+
+.arrow {
+    width: 80px;
+    background-image: url("./assest/reset.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow:hover {
+    animation: clicked 1s ease-in-out;
+}
+
+@keyframes clicked {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 @keyframes showText {
