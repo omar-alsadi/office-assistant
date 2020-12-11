@@ -15,6 +15,8 @@ import SaraEnBye from './slides/Sara.English/SaraEn.bye'
 import ResetButton from './slides/ResetButton'
 
 import SaraFr from './slides/Sara.French/SaraFr'
+import SaraFrV from './slides/Sara.French/SaraFr.version'
+import SaraFrSB from './slides/Sara.French/SaraFr.storybook'
 import SaraFr1A from './slides/Sara.French/SaraFr.website'
 import SaraFr1B from './slides/Sara.French/SaraFr.meet'
 import SaraFr2B from './slides/Sara.French/SaraFr.contact'
@@ -150,11 +152,25 @@ const App = () => {
         <SaraFrBye />
       </div>
     )
-  } else if (option === 'Bonjour') {
+  } else if (option === 'J’aimerais bien savoir plus sur la version Storybook s’il vous plaît') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFrSB />
+      </div>
+    )
+  } else if (option === 'Je veux continuer sur cette version s’il vous plaît') {
     return (
       <div className="App">
         <ResetButton />
         <SaraFr />
+      </div>
+    )
+  } else if (option === 'Bonjour') {
+    return (
+      <div className="App">
+        <ResetButton />
+        <SaraFrV />
       </div>
     );
   } else {
